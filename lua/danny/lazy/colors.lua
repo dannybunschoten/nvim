@@ -19,6 +19,6 @@ return
         },
       })
       vim.opt.termguicolors = true
-      vim.cmd[[colorscheme tokyonight-moon]]
+      vim.cmd[[colorscheme tokyonight]]
     end
   }
