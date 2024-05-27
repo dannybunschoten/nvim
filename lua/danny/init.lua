@@ -1,6 +1,7 @@
 require("danny.set")
 require("danny.remap")
 require("danny.lazy_init")
+require("danny.terminal")
 
 local augroup = vim.api.nvim_create_augroup
 local DannyGroup = augroup('Danny', {})

@@ -55,3 +55,9 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+-- Normal mode key mapping to toggle terminal
+vim.api.nvim_set_keymap('n', '<C-t>', ':lua ToggleTerminal()<CR>', { noremap = true, silent = true })
+
+-- Terminal mode key mapping to toggle terminal
+vim.api.nvim_set_keymap('t', '<C-t>', '<C-\\><C-n>:lua ToggleTerminal()<CR>', { noremap = true, silent = true })
+
