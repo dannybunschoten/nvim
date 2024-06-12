@@ -24,7 +24,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
-
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
@@ -55,6 +54,8 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>")
+
 -- Normal mode key mapping to toggle terminal
 -- vim.api.nvim_set_keymap('n', '<C-t>', ':lua ToggleTerminal()<CR>', { noremap = true, silent = true })
 
@@ -62,5 +63,5 @@ end)
 -- vim.api.nvim_set_keymap('t', '<C-t>', '<C-\\><C-n>:lua ToggleTerminal()<CR>', { noremap = true, silent = true })
 
 -- Comments
-vim.api.nvim_set_keymap('n', '<C-/>', ':CommentToggle<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<C-/>', ':CommentToggle<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-/>', ':CommentToggle<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('v', '<C-/>', ':CommentToggle<CR>', { noremap = true, silent = true })
