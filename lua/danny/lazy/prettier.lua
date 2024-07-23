@@ -4,9 +4,8 @@ return {
     -- Enable neoformat to try using node executable
     vim.cmd('let g:neoformat_try_node_exe = 1')
 
-    -- Create an autocmd to run Neoformat on buffer write for TypeScript files
     vim.api.nvim_create_autocmd('BufWritePre', {
-      pattern = '*.ts',
+      pattern = '*.*',
       callback = function()
         vim.cmd('Neoformat')
       end
