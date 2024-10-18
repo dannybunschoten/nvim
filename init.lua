@@ -236,7 +236,7 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
+	-- "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
@@ -629,6 +629,7 @@ require("lazy").setup({
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
 				ts_ls = {},
 				csharp_ls = {},
+				rust_analyzer = {},
 				--
 
 				lua_ls = {
@@ -662,6 +663,7 @@ require("lazy").setup({
 				"stylua", -- Used to format Lua code
 				"ts_ls",
 				"csharp_ls",
+				"rust_analyzer",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -719,6 +721,8 @@ require("lazy").setup({
 				--
 				-- You can use 'stop_after_first' to run the first available formatter from the list
 				javascript = { "prettierd", "prettier", stop_after_first = true },
+				typescript = { "prettierd", "prettier", stop_after_first = true },
+				html = { "prettierd", "prettier", stop_after_first = true },
 			},
 		},
 	},
